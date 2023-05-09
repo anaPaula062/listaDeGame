@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.util.Objects;
 @Entity
@@ -16,7 +17,9 @@ public class Game {
     private String platforms;
     private Double score;
     private String imgUrl;
+    @Lob
     private String shortDescription;
+    @Lob
     private String longDescription;
 
     public Game(){}
